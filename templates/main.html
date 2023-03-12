@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+      padding: 0;
+      background-color: #E8DEE8;
+    }
+    nav {
+      background-color: #E8DEE8;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+    nav span {
+      color: #4A154B;
+      text-align: center;
+      padding: 14px 16px;
+      font-size: 18px;
+    }
+    nav a {
+      float: left;
+      color: #4A154B;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    nav a:hover {
+      background-color: #E8DEE8;
+      color: black;
+    }
+    nav a.active {
+      background-color: #E8DEE8;
+      color: black;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main</title>
+</head>
+<body>
+  {%if value%}
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <span>|&emsp;<b>{{username}}</b>&emsp;|</span>
+    <a href="/bot">Bot</a>
+    <a href="/signout">Sign Out</a>
+  </nav>
+  {%else%}
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <span>|&emsp;<b>byDanielleM</b>&emsp;|</span>
+    <a href="/signup">Sign Up</a>
+    <a href="/signin">Sign In</a>
+  </nav>
+  {%endif%}
+</body>
+</html>
